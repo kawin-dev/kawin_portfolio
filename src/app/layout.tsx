@@ -37,7 +37,8 @@ export default function RootLayout({
           sx={{
             height: '100%',
             margin: 0,
-            padding: 0
+            padding: 0,
+            backgroundColor: '#241f1f'
           }}>
           {children}
         </Container>

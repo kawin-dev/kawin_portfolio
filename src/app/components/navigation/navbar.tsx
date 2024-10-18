@@ -13,7 +13,7 @@ const NavBar: React.FC = () => {
       >
         <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', padding: '0', width: '100%' }}>
           <Typography variant="h6" component="div" sx={{ display: 'flex', alignItems: 'center' }}>
-            <img src="/path-to-your-logo.png" alt="Logo" style={{ height: '40px', marginRight: '16px' }} />
+            
           </Typography>
 
           <div style={{ marginLeft: 'auto' }}>
