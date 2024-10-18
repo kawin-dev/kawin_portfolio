@@ -33,7 +33,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NavBar />
-        <Container maxWidth={false} sx={{ backgroundColor: 'white' }}>
+        <Container maxWidth={false}
+          sx={{
+            height: '100%',
+            margin: 0,
+            padding: 0
+          }}>
           {children}
         </Container>
       </body>
