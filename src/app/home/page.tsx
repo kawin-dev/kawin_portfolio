@@ -19,7 +19,7 @@ const style = {
 
 
 const HomeComponent: React.FC = () => {
-  const [hoveredWordIndex, setHoveredWordIndex] = useState<any>(null);
+  const [hoveredWordIndex, setHoveredWordIndex] = useState<number | null>(null);
   const [wordSearch, setWordSearch] = useState<string>('Web_development');
   const [alreadyHovered, setAlreadyHovered] = useState<boolean>(false);
   const [openModal, setOpenModal] = useState(false);

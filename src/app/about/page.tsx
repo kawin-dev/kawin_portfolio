@@ -1,4 +1,4 @@
-const Page:React.FC<any> = () => {
+const Page:React.FC = () => {
   return (
     <>
       <div>
