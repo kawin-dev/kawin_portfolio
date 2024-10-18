@@ -9,11 +9,12 @@ const NavBar: React.FC = () => {
         sx={{
           backgroundColor: 'black',
           boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.3)',
+          paddingLeft: '3%'
         }}
       >
         <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', padding: '0', width: '100%' }}>
-          <Typography variant="h6" component="div" sx={{ display: 'flex', alignItems: 'center' }}>
-            
+          <Typography variant="h6" component="div" sx={{ display: 'flex', alignItems: 'center', fontSize: '50px' }}>
+            👽
           </Typography>
 
           <div style={{ marginLeft: 'auto' }}>
