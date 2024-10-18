@@ -64,7 +64,7 @@ const HomeComponent: React.FC = () => {
         }}
       >
         <Image 
-          src="/images/Kawin_Cheong.png" 
+          src="/kawin_portfolio/images/Kawin_Cheong.png" 
           alt="Logo" 
           width={300}
           height={300}
