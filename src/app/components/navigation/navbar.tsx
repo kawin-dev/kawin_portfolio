@@ -8,7 +8,7 @@ const NavBar: React.FC = () => {
   const [baseURL, setBaseURL] = useState<string>('');
 
   useEffect(() => {
-    setBaseURL(window.location.href);
+    setBaseURL(window.location.origin + '/kawin_portfolio');
   }, []);
 
   return (
