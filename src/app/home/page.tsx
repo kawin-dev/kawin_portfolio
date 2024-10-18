@@ -143,7 +143,7 @@ const HomeComponent: React.FC = () => {
           </Container>
           <iframe
             src={`https://en.wikipedia.org/w/index.php?search=${wordSearch}`}
-            style={{ width: '100%', height: '500px', border: 'none' }}
+            style={{ width: '100%', height: '40%', border: 'none' }}
             title="Mini Browser"
           />
         </Container>
