@@ -1,28 +1,14 @@
 "use client";
 
-import { Button, Container } from "@mui/material";
+import { Container } from "@mui/material";
 import SkillSet from "../services/class/skillset";
 import React, { useEffect, useState } from "react";
 
-const animatedElementStyle = {
-  transition: 'transform 5s ease',
-  margin: '10px',
-};
-
 const Page:React.FC = () => {
-  const [skillElems, setSkillElems] = useState<React.ReactNode[]>([
-    <div id="element-1 m-10" style={animatedElementStyle}>1</div>,
-    <div id="element-2 m-10" style={animatedElementStyle}>22</div>
+  const [skillElems] = useState<React.ReactNode[]>([
+    <div id="element-1 m-10" key="1">1</div>,
+    <div id="element-2 m-10" key="22">22</div>
   ]);
-
-  const shiftItems = () => {
-    const newElems = [...skillElems];
-
-    [newElems[0], newElems[1]] = [newElems[1], newElems[0]];
-
-    setSkillElems(newElems);
-  };
-
   useEffect(() => {
     const skillSet = new SkillSet;
 
@@ -44,7 +30,6 @@ const Page:React.FC = () => {
       <Container
         maxWidth={false}
       >
-        <Button onClick={shiftItems}>Shift Items</Button>
       </Container>
       <Container maxWidth={false}>
         {
