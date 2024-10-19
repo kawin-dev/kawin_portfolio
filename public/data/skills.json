@@ -1,0 +1,102 @@
+{
+  "git": {
+    "rate": 10,
+    "projects": [],
+    "fwork_lib": null
+  },
+  "bash": {
+    "rate": 9,
+    "projects": [],
+    "fwork_lib": null
+  },
+  "linux": {
+    "rate": 9,
+    "projects": [],
+    "fwork_lib": null
+  },
+  "c": {
+    "rate": 6,
+    "projects": [],
+    "fwork_lib": null
+  },
+  "javascript": {
+    "rate": 10,
+    "projects": [],
+    "fwork_lib": null
+  },
+  "php": {
+    "rate": 10,
+    "projects": [],
+    "fwork_lib": null
+  },
+  "typescript": {
+    "rate": 8,
+    "projects": [],
+    "fwork_lib": null
+  },
+  "mySQL": {
+    "rate": 8,
+    "projects": [],
+    "fwork_lib": null
+  },
+  "python": {
+    "rate": 5,
+    "projects": [],
+    "fwork_lib": null
+  },
+  "nodeJS": {
+    "rate": 5,
+    "projects": [],
+    "fwork_lib": null
+  },
+  "jquery": {
+    "rate": 10,
+    "projects": [],
+    "fwork_lib": "javascript"
+  },
+  "reactJS": {
+    "rate": 9,
+    "projects": [],
+    "fwork_lib": "typescript"
+  },
+  "expressJS": {
+    "rate": 9,
+    "projects": [],
+    "fwork_lib": "javascript"
+  },
+  "angularjs": {
+    "rate": 6,
+    "projects": [],
+    "fwork_lib": "javascript"
+  },
+  "laravel": {
+    "rate": 10,
+    "projects": [],
+    "fwork_lib": "php"
+  },
+  "octobercms": {
+    "rate": 7,
+    "projects": [],
+    "fwork_lib": "php"
+  },
+  "tastyigniter": {
+    "rate": 6,
+    "projects": [],
+    "fwork_lib": "php"
+  },
+  "codeigniter": {
+    "rate": 7,
+    "projects": [],
+    "fwork_lib": "php"
+  },
+  "tkinter": {
+    "rate": 7,
+    "projects": [],
+    "fwork_lib": "python"
+  },
+  "reactNative": {
+    "rate": 5,
+    "projects": [],
+    "fwork_lib": "typescript"
+  }
+}

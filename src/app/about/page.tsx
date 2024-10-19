@@ -1,26 +1,35 @@
+"use client";
+
 import { Container, Typography } from "@mui/material";
-import Grid from '@mui/material/Grid2';
+import SkillSet from "../services/class/skillset";
+import { useEffect } from "react";
 
 const Page:React.FC = () => {
+  useEffect(() => {
+    const skillSet = new SkillSet;
+
+    console.log(skillSet.skills);
+  }, []);
+
   return (
     <Container
       maxWidth={false}    
       sx={{
         height: '100%',
-        padding: 0,
-        margin: 0
+        paddingLeft: 0,
+        paddingRight: 0,
+        paddingTop: '80px',
+        paddingBotton: 0,
+        margin: 0,
       }}
     >
-      <Grid container>
-        <Grid size={12}>
-          <Typography>
-            Skills
-          </Typography>
-        </Grid>
-        <Grid size={12}>
-          Certificates
-        </Grid>
-      </Grid>
+      <Container
+        maxWidth={false}
+      >
+        <Typography>
+          skills
+        </Typography>
+      </Container>
     </Container>
   );
 };
