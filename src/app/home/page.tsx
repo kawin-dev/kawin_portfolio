@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { Box, Button, Container, Modal, Typography } from "@mui/material";
 import { useState } from 'react';
+import Grid from '@mui/material/Grid2';
 
 const style = {
   position: 'absolute',
@@ -51,25 +52,6 @@ const HomeComponent: React.FC = () => {
   }
   
   return (
-    <>
-      <Container
-        maxWidth={false}
-        sx={{
-          display: 'flex',
-          margin: 0,
-          padding: 0,
-          width: '100%', // Make the container full width
-          justifyContent: 'center', // Center the image horizontally
-          backgroundColor: 'none' // Optional: remove this if you want a specific background
-        }}
-      >
-        <Image 
-          src="/kawin_portfolio/images/Kawin_Cheong.png" 
-          alt="Logo" 
-          width={300}
-          height={300}
-        />
-      </Container>
       <Container
         maxWidth={false}
         sx={{
@@ -79,74 +61,109 @@ const HomeComponent: React.FC = () => {
           // alignItems: 'center',
           margin: 0,
           padding: 0,
-          overflow: 'hidden',
           backgroundColor: 'none'
         }}
       >
-        <Container maxWidth={false}
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          // alignItems: 'center',
-        }}
+        <Grid container
+          spacing={0}
+          sx={{
+            width: '100%',
+            margin: 0,
+            padding: 0,
+            boxSizing: 'border-box',
+          }}
         >
-          <Container
+          <Grid size={12}
             sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              padding: 0,
               margin: 0,
-              padding: 0
             }}
           >
-            <Typography variant="h2"
-              sx={{
-                fontSize: '30px'
-              }}
-            >
-              <a className="hover:bg-blue-700 p-2 rounded" target='_blank' href="https://www.computerscience.org/careers/software-developer/">
-                Software Developer
-              </a>
-            </Typography>
-            <Typography
-              variant="body1"
-              sx={{
-                textAlign: 'left',
-                paddingX: '10%',
-                marginTop: '20px',
-                height: '250px',
-                overflowY: 'scroll',
-                scrollbarWidth: 'none',
-                '&::-webkit-scrollbar': {
-                  display: 'none',
-                },
-                marginLeft: 0,
-                paddingLeft: 0,
-                marginRight: 0,
-                paddingRight: 0,
-                cursor: 'pointer',
-              }}
-            >
-              {words.map((word, index) => (
-                <span
-                  key={index}
-                  onMouseEnter={() => handleMouseEnter(index)}
-                  onMouseLeave={handleMouseLeave}
-                  onClick={() => searchTheWord(word)}
-                  style={{
-                    backgroundColor: hoveredWordIndex === index ? 'yellow' : 'transparent',
-                    color: hoveredWordIndex === index ? 'black' : 'white',
-                    transition: 'background-color 0.2s ease-in-out',
+              <Image 
+                src="/kawin_portfolio/images/Kawin_Cheong.png" 
+                alt="Logo" 
+                width={350}
+                height={350}
+                style={{
+                  objectFit: 'contain',
+                }}
+              />
+          </Grid>
+          <Grid container
+            spacing={2}
+            sx={{
+              display: 'flex',
+              top: '20px'
+            }}
+          >
+            <Grid size={{lg: 6, md: 12, sm: 12}}>
+              <Grid size={12}
+                sx={{
+                  height: 'fit-content'
+                }}
+              >
+                <Typography variant="h2"
+                  sx={{
+                    fontSize: '30px',
+                    paddingLeft: 2,
+                    paddingRight: 2,
                   }}
                 >
-                  {word}{' '}
-                </span>
-              ))}
-            </Typography>
-          </Container>
-          <iframe
-            src={`https://en.wikipedia.org/w/index.php?search=${wordSearch}`}
-            style={{ width: '100%', height: '40%', border: 'none' }}
-            title="Mini Browser"
-          />
-        </Container>
+                  <a className="hover:bg-blue-700 p-2 rounded" target='_blank' href="https://www.computerscience.org/careers/software-developer/">
+                    Software Developer
+                  </a>
+                </Typography>
+              </Grid>
+              <Grid size={12}>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    textAlign: 'left',
+                    paddingX: '10%',
+                    marginTop: '20px',
+                    height: '250px',
+                    overflowY: 'scroll',
+                    scrollbarWidth: 'none',
+                    '&::-webkit-scrollbar': {
+                      display: 'none',
+                    },
+                    marginLeft: 0,
+                    paddingLeft: 2,
+                    marginRight: 0,
+                    paddingRight: 2,
+                    cursor: 'pointer',
+                  }}
+                >
+                  {words.map((word, index) => (
+                    <span
+                      key={index}
+                      onMouseEnter={() => handleMouseEnter(index)}
+                      onMouseLeave={handleMouseLeave}
+                      onClick={() => searchTheWord(word)}
+                      style={{
+                        backgroundColor: hoveredWordIndex === index ? 'yellow' : 'transparent',
+                        color: hoveredWordIndex === index ? 'black' : 'white',
+                        transition: 'background-color 0.2s ease-in-out',
+                      }}
+                    >
+                      {word}{' '}
+                    </span>
+                  ))}
+                </Typography>
+              </Grid>
+            </Grid>
+            <Grid size={{lg: 6, md: 12, sm: 12}}>
+              <iframe
+                src={`https://en.wikipedia.org/w/index.php?search=${wordSearch}`}
+                style={{ width: '100%', height: '90%', border: 'none' }}
+                title="Mini Browser"
+              />
+            </Grid>
+          </Grid>
+        </Grid>
         <Modal
           open={openModal}
           onClose={undefined}
@@ -175,7 +192,6 @@ const HomeComponent: React.FC = () => {
           </Box>
         </Modal>
       </Container>
-    </>
   );
 };
 

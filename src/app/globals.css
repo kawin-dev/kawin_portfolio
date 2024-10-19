@@ -27,8 +27,13 @@ body {
 }
 
 html, body {
-  height: 100%;
+  height: auto;
+  min-height: 100vh;
   margin: 0;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
   padding: 0;
+  background-color: '#241f1f';
+  @media screen and (min-width: 768px) {
+    height: 100vh;
+  }
 }

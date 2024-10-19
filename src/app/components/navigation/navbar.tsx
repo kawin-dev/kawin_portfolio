@@ -12,12 +12,12 @@ const NavBar: React.FC = () => {
   }, []);
 
   return (
-    <Container maxWidth={false} sx={{ margin: '0px!important', padding: '0px!important' }}>
+    <Container maxWidth={false} sx={{ margin: '0px!important', padding: '0px!important', position: 'fixed', zIndex: '999' }}>
       <AppBar
         position="static"
         sx={{
           backgroundColor: 'black',
-          boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.3)',
+          boxShadow: '1px 20px 120px rgba(83, 53, 102, 1)',
           paddingLeft: '3%'
         }}
       >
